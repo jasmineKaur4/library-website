@@ -1,0 +1,190 @@
+<html>
+  <head>
+    <title>Pharmacy Library</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+    }
+    h1 {
+      font-size: 55px;
+    }
+    h2 {
+      font-size: 38px;
+    }
+    h3 {
+      font-size: 34px;
+    }
+    h4 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 18px;
+    }
+    .nav {
+      background-color: #1a504c;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 55px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+    .logo {
+      position: relative;
+      width: 237px;
+    }
+    .logo-img {
+      width: 42px;
+      height: 36px;
+      top: 11px;
+      position: absolute;
+      margin: 0;
+    }
+    .logo-text {
+      padding: 20px 0px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      float: right;
+      margin: 0;
+    }
+    .list {
+      float: left;
+      list-style-type: none;
+      margin: 0;
+    }
+
+    .list a {
+      color: white;
+      text-align: center;
+      padding: 17px 16px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .list a:hover:not(.active) {
+      background-color: #228a87;
+    }
+
+    .active {
+      background-color: #fcb713;
+    }
+    li {
+      text-align: left;
+      font-size: 18px;
+    }
+    ul {
+      margin: 0;
+      padding-left: 16px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 50px;
+      color: #1a504c;
+      margin-top: 100px;
+    }
+    img {
+      margin: 10px;
+    }
+    .gallery {
+      margin-bottom: 380px;
+    }
+    .flexcontainer {
+      display: flex;
+      align-content: space-around;
+      justify-content: center;
+      flex-wrap: wrap;
+      height: 700px;
+    }
+    #footer {
+      height: 300px;
+      color: white;
+      background-color: rgb(54, 54, 54);
+      margin-top: 100px;
+      font-weight: bold;
+    }
+    .section-1 {
+      text-align: center;
+      padding: 20px;
+    }
+    .section-1 > h3 {
+      color: #269a96;
+      margin: 18px 0px 30px 0px;
+    }
+    .section-2 {
+      text-align: center;
+      padding: 14px;
+      background-color: #282828;
+    }
+    .section-2 > p {
+      margin: 0;
+    }
+  </style>
+
+  <body>
+    <div class="nav">
+      <div class="logo">
+        <img src="logo4.png" alt="" class="logo-img" />
+        <h4 class="logo-text">PHARMACY LIBRARY</h4>
+      </div>
+      <ul>
+        <li class="list"><a href="file2.html">Home</a></li>
+        <!-- <li class="list"><a href="signup.html">Signup</a></li> -->
+        <li class="list"><a href="books2.html">Books</a></li>
+        <li class="list">
+          <a class="active" href="gallery.html"> Gallery </a>
+        </li>
+        <li class="list"><a href="rules2.html">Rules</a></li>
+        <li class="list"><a href="feedback.html">Feedback</a></li>
+        <li class="list"><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+    <br />
+    <div class="gallery" id="gallery">
+      <h1>Gallery</h1>
+      <br />
+      <div class="flexcontainer">
+        <img src="pharmacy.jpg" height="300" width="200" />
+
+        <img src="library1.jpg" height="300" width="200" />
+
+        <img src="pc1.jpg" height="300" width="200" />
+
+        <img src="library5.jpg" height="300" width="200" />
+
+        <img src="library2.jpg" height="300" width="200" />
+
+        <img src="rule1.jpg" height="300" width="200" />
+
+        <img src="rs4.jpg" height="300" width="200" />
+
+        <img src="library6.jpg" height="300" width="200" />
+
+        <img src="rs1.jpg" height="300" width="200" />
+
+        <img src="idea.jpg" height="300" width="200" />
+
+        <img src="thought1.jpg" height="300" width="200" />
+
+        <img src="rs3.jpg" height="300" width="200" />
+        <img src="rs2.jpg" height="300" width="200" />
+        <img src="rule2.jpg" height="300" width="200" />
+        <img src="thought2.jpg" height="300" width="200" />
+      </div>
+    </div>
+    <div id="footer">
+      <div class="section-1">
+        <h3 style="text-align: center">Contact Us</h3>
+        <p>CHITKARA UNIVERSITY – HIMACHAL PRADESH</p>
+        <p>Pinjore-Barotiwala National Highway (NH-21A)</p>
+        <p>Himachal Pradesh – 174 103</p>
+      </div>
+      <div class="section-2">
+        <p>Made with ❤️ by Jasmine Kaur, All rights reserved</p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pharmacy Library</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+    }
+    h1 {
+      font-size: 48px;
+    }
+    h2 {
+      font-size: 34px;
+    }
+    h3 {
+      font-size: 34px;
+    }
+    h4 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 18px;
+    }
+    .nav {
+      background-color: #1a504c;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 55px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+    .logo {
+      position: relative;
+      width: 237px;
+    }
+    .logo-img {
+      width: 42px;
+      height: 36px;
+      top: 11px;
+      position: absolute;
+      margin: 0;
+    }
+    .logo-text {
+      padding: 20px 0px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      float: right;
+      margin: 0;
+    }
+    .list {
+      float: left;
+      list-style-type: none;
+      margin: 0;
+    }
+
+    .list a {
+      color: white;
+      text-align: center;
+      padding: 17px 16px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .list a:hover:not(.active) {
+      background-color: #228a87;
+    }
+
+    .active {
+      background-color: #fcb713;
+    }
+    h1 {
+      text-align: center;
+      color: #1a504c;
+      margin: 70px auto;
+      width: 800px;
+    }
+    h2 {
+      text-align: left;
+      color: black;
+      margin-top: 0;
+    }
+    td,
+    li {
+      text-align: left;
+      font-size: 18px;
+    }
+    ul {
+      margin: 0;
+      padding-left: 16px;
+    }
+    .home {
+      margin: 0px 30px;
+    }
+    .body1 {
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    .review-section {
+      padding: 50px 30px;
+      background-color: #ffffff;
+      text-align: center;
+    }
+
+    .review-section h2 {
+      font-size: 36px;
+      color: black;
+      margin-bottom: 10px;
+      text-align: left;
+    }
+
+    .review-section p {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 40px;
+      text-align: left;
+    }
+
+    .reviews {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    .review-card {
+      width: 282px;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: left;
+    }
+
+    .review-card h3 {
+      font-size: 20px;
+      color: #1a504c;
+      margin-bottom: 5px;
+    }
+
+    .review-card h4 {
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .review-card p {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* .review-card .profile-picture {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #ddd;
+            margin-bottom: 15px;
+        } */
+    #footer {
+      height: 300px;
+      color: white;
+      background-color: rgb(54, 54, 54);
+      margin-top: 100px;
+      font-weight: bold;
+    }
+    .section-1 {
+      text-align: center;
+      padding: 20px;
+    }
+    .section-1 > h3 {
+      color: #269a96;
+      margin: 18px 0px 30px 0px;
+    }
+    .section-2 {
+      text-align: center;
+      padding: 14px;
+      background-color: #282828;
+    }
+    .section-2 > p {
+      margin: 0;
+    }
+    .line {
+      width: 15%;
+      text-align: left;
+      margin: 18px 0px 18px 0px;
+      border: 3px solid #228a87;
+      color: #228a87;
+    }
+    .faq-section {
+      padding: 40px 30px;
+      background: #f9f8f6;
+      margin: 60px 0px 10px 0;
+    }
+
+    .faq-title {
+      text-align: left;
+      /* font-size: 2rem; */
+      color: black;
+      margin-bottom: 10px;
+      margin-top: 0;
+    }
+
+    .faq-description {
+      text-align: left;
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 40px;
+    }
+
+    .faq-item {
+      border: 1px solid #e0e0e0;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    .faq-label {
+      padding: 15px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #228a87;
+      cursor: pointer;
+      background: #f9f9f9;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-label:hover {
+      background: #e9ecef;
+    }
+
+    .faq-label::after {
+      content: "▼";
+      font-size: 1rem;
+      transition: transform 0.3s ease;
+    }
+
+    input[type="checkbox"]:checked + .faq-label::after {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      font-size: 1rem;
+      color: #333;
+      background: #fff;
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 15px; /* Left and right padding */
+      transition: max-height 0.5s ease, padding 0.5s ease;
+    }
+
+    /* Expanded state */
+    input[type="checkbox"]:checked ~ .faq-answer {
+      max-height: 200px; /* Adjust based on your content size */
+      padding: 15px; /* Apply padding for a smooth expand and collapse */
+    }
+    /* opacity:0.7; */
+  </style>
+  <body>
+    <div class="nav">
+      <div class="logo">
+        <img src="logo4.png" alt="" class="logo-img" />
+        <h4 class="logo-text">PHARMACY LIBRARY</h4>
+      </div>
+      <ul>
+        <li class="list"><a class="active" href="#home">Home</a></li>
+        <li class="list"><a href="books2.html">Books</a></li>
+        <li class="list"><a href="gallery.html"> Gallery </a></li>
+        <li class="list"><a href="rules2.html">Rules</a></li>
+        <li class="list"><a href="feedback.html">Feedback</a></li>
+        <li class="list"><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+
+    <img src="chitkara.jpg" height="600" width="100%" />
+    <br />
+    <br />
+    <div class="home" id="home">
+      <h1>WELCOME TO THE PHARMACY LIBRARY</h1>
+      <br />
+      <hr class="line" />
+      <h2>Introduction</h2>
+      <p>
+        The library services are the cornerstone of the education system at
+        Chitkara University, India. The mission of our library services is to
+        facilitate the creation of new knowledge through acquisition,
+        organization, and dissemination of knowledge resources.
+      </p>
+
+      <p>
+        The University Libraries offer a wide range of materials in a variety of
+        formats-from traditional books and serials to films, and multimedia and
+        networked information from around the world. Highly skilled staff
+        assists students to use the local collections and find information on
+        specific topics. Our libraries are a learning space where students are
+        inspired to explore research and create. Our libraries are not only the
+        places to think but also an informal work area where students gather to
+        collaborate.
+      </p>
+      <p>
+        Our Pharmacy Library caters to the needs of pharmacy students, faculty
+        and researchers, providing access to pharmaceutical sciences literature,
+        drug information databases, compounding references, and pharmacy
+        practice resources. It is a hub for innovation and excellence in
+        pharmacy education and research. The library is located in KALAM BLOCK
+        which is open from 9:00 AM to 9:00 PM.
+      </p>
+
+      <!-- <h2>GENERAL RULES: DISCIPLINE, SECURITY, AND PRIVACY</h2>
+      <ul>
+        <li>
+          All personal belongings should be kept outside the Library at the
+          designated place.
+        </li>
+        <li>
+          Personal reading material cannot be brought inside the library, except
+          small notebooks for taking notes.
+        </li>
+        <li>
+          Books from one section should not be taken to another section without
+          permission of the Library staff. For example, books from the textbook
+          section should not be taken to the reading hall or periodicals
+          section.
+        </li>
+        <li>
+          Books or other materials taken from the stacks should not be
+          re-shelved by the readers but should be left on the tables reserved
+          for this purpose.
+        </li>
+        <li>Please remember that a book misplaced is a book lost.</li>
+        <li>
+          Computer terminals provided in the Library for searching the Online
+          Public Access catalogs, databases, or retrieving any other online
+          information are made available through Library systems. Use of these
+          terminals for any unauthorized purpose, accessing Chitkara University
+          or external networks, changing or damaging the hardware/software
+          settings, data, or any other illegal activity will be liable for
+          punitive action.
+        </li>
+        <li>
+          Using computers for social media is prohibited. (Computers are only
+          used for education projects, E-resources, study material, etc). If any
+          student misuses the internet, Inter-disciplinary action will be taken
+          against him or her.
+        </li>
+        <li>
+          Silence and order must at all times be maintained in and around the
+          Library. Smoking is not allowed inside the Library. Visitors are
+          expected to maintain decent and civilized behavior and mannerism.
+        </li>
+        <li>Mobile phone in vibration mode only is permissible.</li>
+        <li>
+          Library staffs have a right to ask any person whose presence in their
+          opinion has violated the rule or whose presence in their opinion will
+          be detrimental to decorum and environment conducive to reading, to
+          leave the library premises. Repeated incidence of such behavior will
+          attract punitive action.
+        </li>
+        <li>
+          All visitors to the library, including members, may be subjected to
+          frisking and bag checks, if required. This is necessary to prevent the
+          theft of library material.
+        </li>
+        <li>
+          Theft and mutilation of the library material, damage or defacing of
+          the library property, and indulging in unlawful activities, indecent
+          or socially unacceptable behavior will be considered as serious
+          misconduct and people indulging in, encouraging, or abating such
+          activities and in possession of unauthorized library books are liable
+          for punitive action by the Institute authorities as well as criminal
+          proceedings.
+        </li>
+        <li>
+          The librarian reserves the right to suspend the membership of any
+          member found misbehaving, abusing the library staff, or behaving in an
+          indecent manner.
+        </li>
+        <li>
+          The librarian may recall any book from the member at any time or
+          suspend his/her services without explaining.
+        </li>
+      </ul>
+
+      <hr class="line" style="margin-top: 60px" />
+      <h2>Frequently Asked Questions</h2>
+      <ul>
+        <li>
+          <b>What are the library's hours of operation?</b><br />
+          <br />
+          OPENING HOURS<br />
+          (Monday -Saturday) 9:00 am – 9:00 pm<br />
+          Sunday 9:00 am – 4:30 pm<br />
+          LENDING SERVICES (Circulation Counter)<br />
+          Monday – Saturday : 9:00 am – 4:00 pm<br />
+          LIBRARY SERVICES<br />
+          Monday – Saturday : 9:00 am – 4:00 pm<br />
+          PHOTOCOPY SERVICES<br />
+          Monday – Saturday : 9:00 am – 4:00 pm<br />
+          PRINTOUTS SERVICES<br />
+          Monday – Saturday : 9:00 am – 4:00 pm<br />
+          SCANNING SERVICES<br />
+          Monday – Saturday : 9:00 am – 4:00 pm<br />
+          HOLIDAYS<br />
+          Closed on Chitkara University, National and State Holidays.
+        </li>
+        <br /><br />
+        <li>
+          <b>What are the rules for using library computers?</b><br /><br />
+          Computers are only used for education-projects, research E-Journals
+          etc.<br />
+          Using computers for social media is prohibited. If any student misuse
+          Internet, Inter-disciplinary action will be taken against him or her.
+        </li>
+        <br /><br />
+        <li>
+          <b>What happens if I return an item late?</b><br /><br />
+          Fine of Rs. 2 per day will be charged for the overdue book only from
+          undergraduate, Postgraduate students and paid members and there is no
+          fine on Research Scholars /PhD, Faculty, Associates, Junior Associates
+          and Staff members.
+        </li>
+      </ul> -->
+
+      <!-- <BR> -->
+    </div>
+
+    <section class="faq-section">
+      <hr class="line" />
+      <h2 class="faq-title">Frequently Asked Questions</h2>
+      <p class="faq-description">
+        A list of commonly asked questions about our library.
+      </p>
+
+      <div class="faq-item">
+        <input type="checkbox" id="faq1" />
+        <label class="faq-label" for="faq1">
+          What are the rules for using library computers?
+        </label>
+        <div class="faq-answer">
+          Computers are only for educational projects, research, and E-Journals.
+          Social media use is prohibited. Misuse of the internet will result in
+          disciplinary action.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <input type="checkbox" id="faq2" />
+        <label class="faq-label" for="faq2">
+          What happens if I return an item late?
+        </label>
+        <div class="faq-answer">
+          A fine of Rs. 2 per day will be charged for overdue books for
+          undergraduate, postgraduate students, and paid members. Research
+          Scholars/PhD, Faculty, Associates, Junior Associates, and Staff
+          members are exempt from fines.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <input type="checkbox" id="faq3" />
+        <label class="faq-label" for="faq3">
+          Can I bring food or drinks into the library?
+        </label>
+        <div class="faq-answer">
+          Food and drinks are not allowed in the library to ensure cleanliness
+          and protect resources.
+        </div>
+      </div>
+    </section>
+
+    <div class="body1">
+      <section class="review-section">
+        <hr class="line" />
+        <h2>What They Say About Us</h2>
+        <p>Testimonials from our greatest readers and members</p>
+        <div class="reviews">
+          <div class="review-card">
+            <div class="profile-picture"></div>
+            <h3>George Walker</h3>
+            <h4>Book Enthusiast</h4>
+            <p>
+              "The library's collection is outstanding, and the staff is always
+              helpful. I love spending my weekends exploring new books."
+            </p>
+          </div>
+          <div class="review-card">
+            <div class="profile-picture"></div>
+            <h3>John Smith</h3>
+            <h4>Avid Reader</h4>
+            <p>
+              "A peaceful and inspiring place to read. The events hosted here
+              are engaging and always spark great discussions."
+            </p>
+          </div>
+          <div class="review-card">
+            <div class="profile-picture"></div>
+            <h3>Emma Johnson</h3>
+            <h4>Literature Lover</h4>
+            <p>
+              "A wonderful place to discover hidden literary gems. The cozy
+              atmosphere makes it the perfect spot to unwind and enjoy a good
+              book."
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div id="footer">
+      <div class="section-1">
+        <h3 style="text-align: center">Contact Us</h3>
+        <p>CHITKARA UNIVERSITY – HIMACHAL PRADESH</p>
+        <p>Pinjore-Barotiwala National Highway (NH-21A)</p>
+        <p>Himachal Pradesh – 174 103</p>
+      </div>
+      <div class="section-2">
+        <p>Made with ❤️ by Jasmine Kaur, All rights reserved</p>
+      </div>
+    </div>
+  </body>
+</html>

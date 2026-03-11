@@ -1,0 +1,81 @@
+<head>
+    <title>Pharmacy Library</title>
+  </head>
+<style>
+  body {
+    font-family: Arial;
+  }
+  h1 {
+    text-align: center;
+    font-size: 34px;
+    color: #1a504c;
+  }
+  h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #000000;
+  }
+  form {
+    border-style: solid;
+    border-radius: 5px;
+    border-color: white;
+    background-color: white;
+    width: 400px;
+    height: 525px;
+    border-width: thick;
+    text-align: left;
+    margin-left: 350px;
+    margin-top: 100px;
+  }
+  body {
+    background-color: rgba(204, 203, 203, 0.903);
+  }
+  label {
+    font-size: 20px;
+    text-align: left;
+  }
+  #name,
+  #email,
+  #password {
+    width: 300px;
+    height: 30px;
+    margin-left: 45px;
+  }
+  #submit {
+    background-color: #228a87;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    margin-top: 25px;
+    width: 150px;
+    height: 40px;
+    margin-left: 125px;
+    cursor: pointer;
+  }
+  #cq {
+    /* height: 15px; */
+    text-align: center;
+  }
+</style>
+<body>
+  <form class="form" action="file1.html">
+    <h1>The Pharmacy Library</h1>
+    <h2>Sign up here</h2>
+    <br />
+    <label for="name" id="name">Name</label><br />
+    <input type="text" id="name" required/> <br />
+    <br />
+    <label for="email" id="email">Email</label><br />
+    <input type="email" id="email" required/><br />
+    <br />
+    <label for="password" id="password">Password</label><br />
+    <input type="password" id="password" required/><br />
+    <br />
+    <br />
+    <input type="checkbox" id="cq" required/>
+    <label for="cq" id="cq">I agree with all the terms and conditions.</label>
+    <br />
+    <br />
+    <input type="submit" id="submit" value="Submit" />
+  </form>
+</body>

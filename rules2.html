@@ -1,0 +1,301 @@
+<head>
+  <title>Pharmacy Library</title>
+</head>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial;
+  }
+  h1 {
+    font-size: 55px;
+  }
+  h2 {
+    font-size: 38px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 18px;
+  }
+  .nav {
+    background-color: #1a504c;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .logo {
+    position: relative;
+    width: 237px;
+  }
+  .logo-img {
+    width: 42px;
+    height: 36px;
+    top: 11px;
+    position: absolute;
+    margin: 0;
+  }
+  .logo-text {
+    padding: 20px 0px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    float: right;
+    margin: 0;
+  }
+  .list {
+    float: left;
+    list-style-type: none;
+    margin: 0;
+  }
+
+  .list a {
+    color: white;
+    text-align: center;
+    padding: 17px 16px;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .list a:hover:not(.active) {
+    background-color: #228a87;
+  }
+
+  .active {
+    background-color: #fcb713;
+  }
+  h1 {
+    text-align: center;
+    font-size: 42px;
+    color: #1a504c;
+    margin-top: 100px;
+  }
+  h2 {
+    text-align: left;
+    color: black;
+    margin-top: 0;
+    font-size: 30px;
+  }
+
+  li {
+    text-align: left;
+    font-size: 18px;
+  }
+  ul {
+    margin: 0;
+    padding-left: 16px;
+  }
+  .home {
+    margin: 0px 30px;
+  }
+  .rules {
+    margin: 0px 30px;
+  }
+  #footer {
+    height: 300px;
+    color: white;
+    background-color: rgb(54, 54, 54);
+    margin-top: 100px;
+    font-weight: bold;
+  }
+  .section-1 {
+    text-align: center;
+    padding: 20px;
+  }
+  .section-1 > h3 {
+    color: #269a96;
+    margin: 18px 0px 30px 0px;
+  }
+  .section-2 {
+    text-align: center;
+    padding: 14px;
+    background-color: #282828;
+  }
+  .section-2 > p {
+    margin: 0;
+  }
+  .line {
+    width: 15%;
+    text-align: left;
+    margin: 60px 0px 18px 0px;
+    border: 3px solid #228a87;
+    color: #228a87;
+  }
+
+  .column {
+    border: 2px solid #e9e9e9;
+  }
+  td {
+    border-right: 2px solid #e9e9e9;
+  }
+  .bottom {
+    border-bottom: 2px solid #e9e9e9;
+  }
+
+  .box {
+    background-color: #f9f8f6;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+    height: 380px;
+    margin-top: 50px;
+    align-items: center;
+  }
+  table {
+    width: 505px;
+    height: 200px;
+  }
+
+  td {
+    text-align: left;
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  .white {
+    background-color: white;
+  }
+  /* .column{float:left;} */
+</style>
+<body>
+  <div>
+    <div class="nav">
+      <div class="logo">
+        <img src="logo4.png" alt="" class="logo-img" />
+        <h4 class="logo-text">PHARMACY LIBRARY</h4>
+      </div>
+      <ul>
+        <li class="list"><a href="file2.html">Home</a></li>
+        <li class="list"><a href="books2.html">Books</a></li>
+        <li class="list"><a href="gallery.html"> Gallery </a></li>
+        <li class="list"><a class="active" href="rules2.html">Rules</a></li>
+        <li class="list"><a href="feedback.html">Feedback</a></li>
+        <li class="list"><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="rules" id="rules">
+    <h1>LIBRARY RULES</h1>
+    <hr class="line" />
+    <h2>Enterance Inside Library</h2>
+    <p>
+      All members have to show their library cards before entering the library.
+      A membership card is mandatory for use of library services. Members have
+      to scan their ID Cards at the entrance. The scanning of the ID card shall
+      ensure that the person concerned agrees to abide by the rules and
+      regulations of the library. The security personnel at the entrance of the
+      library examine everything that passes in to or goes out of the library.
+    </p>
+  </div>
+  <div class="box">
+    <div class="inner-box1">
+      <h3 style="margin: 0; margin-bottom: 20px">Library Membership</h3>
+      <table class="column" border="0" style="border-collapse: collapse">
+        <tr>
+          <td class="bottom"><b>Category</b></td>
+          <td class="bottom"><b>Books</b></td>
+          <td class="bottom"><b>CD/DVD</b></td>
+        </tr>
+        <tr>
+          <td class="white">B.Tech</td>
+          <td class="white">4 Books for 21 days</td>
+          <td class="white">1 for over night</td>
+        </tr>
+        <tr>
+          <td class="white">M.Tech</td>
+          <td class="white">4 Book for 21 days</td>
+          <td class="white">1 for over night</td>
+        </tr>
+        <tr>
+          <td class="white">Research Scholars</td>
+          <td class="white">10 Books for 21 days</td>
+          <td class="white">1 for over night</td>
+        </tr>
+        <tr>
+          <td class="white">Teaching Staff</td>
+          <td class="white">5 Books for 30 days</td>
+          <td class="white">1 for over night</td>
+        </tr>
+        <tr>
+          <td class="white">Non Teaching Staff</td>
+          <td class="white">10 Books for 150 days</td>
+          <td class="white">1 for over night</td>
+        </tr>
+      </table>
+    </div>
+    <br />
+
+    <div class="inner-box2">
+      <h3 style="margin: 0; margin-bottom: 20px">Library Hours</h3>
+      <table border="0" class="column" style="border-collapse: collapse">
+        <tr>
+          <td class="bottom"><b>Category</b></td>
+          <td class="bottom"><b>Day</b></td>
+          <td class="bottom"><b>Timings</b></td>
+        </tr>
+        <tr>
+          <td class="white">Opening Hours</td>
+          <td class="white">Monday-Saturday</td>
+
+          <td class="white">9:00AM-9:00PM</td>
+        </tr>
+        <tr>
+          <td class="white">Library Services</td>
+          <td class="white">Monday-Saturday</td>
+          <td class="white">9:00AM-4:00PM</td>
+        </tr>
+        <tr>
+          <td class="white">Lending Services</td>
+          <td class="white">Monday-Saturday</td>
+          <td class="white">9:00AM-4:00PM</td>
+        </tr>
+        <tr>
+          <td class="white">Photocopy Services</td>
+          <td class="white">Monday-Saturday</td>
+          <td class="white">9:00AM-4:00PM</td>
+        </tr>
+        <tr>
+          <td class="white">Printout Services</td>
+          <td class="white">Monday-Saturday</td>
+          <td class="white">9:00AM-4:00PM</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="rules">
+    <hr class="line" />
+    <h2>Due-date for return of books</h2>
+    <p>
+      <b
+        >Failure to return books in time will attract the following punitive
+        actions:-</b
+      >
+    </p>
+    <ul>
+      <li>
+        A fine of Rs. 2 per day will be charged for the overdue book only from
+        undergraduate and postgraduate students and there will be no fine on
+        Research Scholars /Ph.D., Faculty, Associates, Junior Associates, and
+        Staff members.
+      </li>
+    </ul>
+  </div>
+  <div id="footer">
+    <div class="section-1">
+      <h3 style="text-align: center">Contact Us</h3>
+      <p>CHITKARA UNIVERSITY – HIMACHAL PRADESH</p>
+      <p>Pinjore-Barotiwala National Highway (NH-21A)</p>
+      <p>Himachal Pradesh – 174 103</p>
+    </div>
+    <div class="section-2">
+      <p>Made with ❤️ by Jasmine Kaur, All rights reserved</p>
+    </div>
+  </div>
+</body>
